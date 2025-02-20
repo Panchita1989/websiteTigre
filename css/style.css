@@ -1,0 +1,441 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background: rgb(204, 202, 144);
+  background: beige;
+  background: rgb(246, 239, 237);
+  margin: 1%;
+  color: dimgray;
+
+}
+body a {
+  color: black;
+  transition: all ease-in-out 0.2s;
+}
+.mobile {
+  display: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header *{
+ color: dimgray;
+ list-style: none;
+ text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 200px;
+  align-items: center;
+}
+footer a{
+  color: dimgray;
+}
+footer h3 {
+  text-align: center;
+  margin: 0;
+}
+footer ul {
+  padding-left: 0;
+}
+.welcomeMobile {
+  display: none;
+}
+.social{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20%;
+  font-size: 21px;
+}
+.copy{
+  color: dimgray;
+  opacity: 0.5;
+  font-size: 12px;
+  text-align: center;
+  justify-self: center;
+  align-self: flex-end;
+  width: 100%;
+}
+a:hover{
+  color: rgb(189, 181, 167);
+  transform: translateY(-10px);
+}
+header a:hover {
+  color: rgb(189, 181, 167);
+  transform: translateY(-5px);
+}
+li{
+  transition: all ease-in-out 0.2s;
+}
+li:hover{
+  transform: translateY(-5px);
+  color: rgb(189, 181, 167);
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+header img {
+ width: 100px;
+ transition: all ease-in-out 0.2s;
+}
+nav {
+  display: flex;
+}
+.navigation{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  width: 50%;
+}
+.trip {
+  width: 35px;
+  background: black;
+}
+
+.media{
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  width: 50%;
+  justify-content: flex-end;
+  font-size: 21px;
+}
+a :hover{
+  color: rgb(189, 181, 167);
+}
+
+.welcome{
+  width: 100%;
+  background-image: url("https://cdn.pixabay.com/photo/2016/12/07/09/14/petanque-1888901_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.784);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin-bottom: 5%;
+}
+.container h2,
+.container h1{
+  text-align: center;
+}
+.comments{
+  height: 300px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.links{
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap; 
+  /*background-image: url("file:///C:/Users/franc/OneDrive/Desktop/websiteTigre/css/tigrewhite.png");*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: saturation;
+ /* "C:\Users\franc\OneDrive\Desktop\websiteTigre\css\TIGRE-BLANCOV2-H.jpg"*/
+}
+
+
+.links div{
+  width: 50%;
+  height: 450px;
+  transition: all ease-in-out 0.8s;
+  
+}
+.links div:hover{
+  background-color: rgb(245, 231, 220);
+  background-image: url("tigrewhite-removebg-preview.png");
+  transform: translateY(-20px);
+}
+
+
+.menu {
+  /*background: url("https://cdn.pixabay.com/photo/2023/02/04/20/15/table-7768088_960_720.jpg");*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.links a{
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.petanque{
+  /*background: url("https://cdn.pixabay.com/photo/2016/05/24/21/53/hamburg-1413425_960_720.jpg");*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.location {
+  /*background: url("https://cdn.pixabay.com/photo/2023/11/02/13/07/navigation-8360640_960_720.jpg");*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+.fotos{
+ /* background: url("https://cdn.pixabay.com/photo/2017/08/05/20/12/restaurant-2585265_1280.jpg");*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+.comments{
+  height: auto;
+}
+
+
+@media screen and (max-width: 1200px){
+  .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    margin-top: 0;
+  }
+  .links div{
+    width: 100%;
+  }
+  .container{
+    margin-bottom: 0;
+  }
+  .welcome {
+    margin-bottom: 1%;
+  }
+  
+}
+@media screen and (max-width: 800px) {
+  .links div {
+    width: 100%;
+    height: 300px;
+  }
+  .container {
+    font-size: 30px;
+  }
+  .maps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .navigation{
+    flex-direction: column;
+  }
+  .media{
+    justify-content: space-around;
+  }
+  footer{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: auto;
+  }
+  footer div {
+    text-align: center;
+  }
+ .maps iframe{
+    width: 300px;
+    height: 300px;
+ }
+ .copy{
+ 
+  justify-self: center;
+  
+ }
+  section img{
+    width: 100%;
+ }
+
+}
+
+@media screen and (max-width: 600px){
+
+  body {
+    background: rgb(246, 239, 237);
+  }
+  .welcome {
+    background-image: url("tigreblanco-removebg-preview.png");
+    background-size: contain;
+    color:dimgray;
+    height: ;
+  }
+  .container{
+    height: 200px;
+    flex: none;
+  }
+  .container h1,
+  .container h2 {
+    display: none;
+  }
+
+
+  .container .welcomeMobile {
+   display: inline;
+   margin-top: -80%;
+   color: black;
+  }
+
+  .welcome h1,
+  .welcome h2 {
+    font-size: 25px;
+  }
+
+  .links .menu,
+  .links .petanque,
+  .links .location,
+  .links .fotos{
+    display: none;    
+  }
+ 
+   .links .mobile {
+    display: block;
+    border: 2px solid dimgray;
+    border-radius: 5px;
+    background: rgb(246, 239, 237);
+    margin-bottom: 5%;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    font-size: 15px;
+    color:dimgray;
+    padding-top: 30px;
+    transition: all ease-in-out 0.9s;
+   
+  }
+  .mobile > a {
+    font-size: 15px;
+    color:dimgray;
+  }
+  .mobile:hover{
+    background: rgb(192, 192, 181);
+    transform: translateY(-10px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  
+  }
+}
+li{
+  transition: all ease-in-out 0.2s;
+}
+li:hover{
+  transform: translateY(-2px);
+}
+
+.comments h2{
+  font-size: 1.2rem;
+}
+/******************************************
+/* MENU
+/*******************************************/
+section {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+img {
+  width: 500px;
+  height: auto;
+}
+
+.menuFoto {
+  display: flex;
+  flex-wrap: wrap; 
+  
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.falafel {
+  align-self: flex-start;
+}
+
+/******************************************
+/* PÉTANQUE
+/*******************************************/
+.petanca {
+  display: flex;
+  justify-content: center;
+ 
+}
+.petancaFotos {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+  flex-wrap: wrap;
+  width: 100%;
+  column-gap: 10px;
+  row-gap: 10px;
+  height: auto;
+}
+/******************************************
+/* LOTATION
+/*******************************************/
+.locationMaps {
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+.locationMaps img{
+  width: 70%;
+  
+}
+.maps {
+  display: flex;
+  margin-top: 2%;
+}
+.adress {
+  width: 50%;
+  align-self: center;
+}
