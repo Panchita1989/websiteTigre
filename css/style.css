@@ -367,6 +367,10 @@ a :hover{
     background-position: right;
   
   }
+  .petancaFotos video {
+    width: 100%;
+    height: auto; 
+  }
 
 }
 li{
