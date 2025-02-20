@@ -367,6 +367,7 @@ a :hover{
     background-position: right;
   
   }
+
 }
 li{
   transition: all ease-in-out 0.2s;
@@ -379,11 +380,6 @@ li:hover{
   font-size: 1.2rem;
 }
 
-.petancaFotos video{
-  width: 100%;
-  height: auto;
-  
-}
 /******************************************
 /* MENU
 /*******************************************/
