@@ -36,7 +36,27 @@ body a {
 .mobile {
   display: none;
 }
+.backToTop{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 35px;
+  z-index: 1000;
+  transition: 0.5s;
+  display: none;
+}
+.backToTop:hover{
+  transform: scale(1.1);
+}
+.visibel{
+  display: block;
+  animation: show 1s forwards;
 
+}
+@keyframes show{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
 
 /******************************************
 /* LAYOUT
@@ -179,7 +199,7 @@ a :hover{
   
 }
 .links div:hover{
-  background-color: rgb(245, 231, 220);
+ /* background-color: rgb(245, 231, 220);*/
   background-image: url("tigrewhite-removebg-preview.png");
   transform: translateY(-20px);
 }
@@ -252,6 +272,9 @@ a :hover{
   .welcome {
     margin-bottom: 1%;
   }
+  .backToTop{
+    font-size: 30px;
+  }
   
 }
 @media screen and (max-width: 800px) {
@@ -267,6 +290,9 @@ a :hover{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+  }
+  .backToTop{
+    font-size: 25px;
   }
 
 }
@@ -297,6 +323,9 @@ a :hover{
  }
   section img{
     width: 100%;
+ }
+ .backToTop{
+  display: none;
  }
 
 }
